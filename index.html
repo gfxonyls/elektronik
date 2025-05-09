@@ -1,98 +1,113 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Halaman Dalam Pembuatan</title>
-  <style>
-    body {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektronik</title>
+    <style>
+         body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
+      padding: 0;
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
-      height: 100vh;
+      align-items: center;
+    }
+
+    header {
+      background: linear-gradient(135deg, #3f87a6, #ebf8e1);
+      height: auto;
+      width: 100%;
       text-align: center;
-    }
-
-    .container {
-      padding: 30px;
-      border-radius: 12px;
-      max-width: 600px;
-      width: 90%;
-    }
-
-    .logo {
-      max-width: 250px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      color: #ff6b6b;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.1em;
-      color: #333;
-    }
-
-    .btn-kembali {
-      display: inline-block;
-      margin-top: 20px;
-      margin-bottom: 10px;
-      padding: 10px 20px;
-      background-color: #007bff;
+      padding: 30px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
       color: white;
-      text-decoration: none;
-      border-radius: 8px;
+    }
+
+    header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+    }
+
+    header h1 {
+      margin: 15px 0 5px;
+      font-size: 26px;
       font-weight: bold;
-      transition: background-color 0.3s ease;
     }
 
-    .btn-kembali:hover {
-      background-color: #0056b3;
+    main {
+      padding: 20px;
+      width: 100%;
+      max-width: 500px;
     }
 
-    .clock-box {
-      margin-top: 15px;
-      background-color: #222;
-      color: #0f0;
-      padding: 15px 30px;
-      font-size: 2em;
-      font-family: 'Courier New', monospace;
-      border-radius: 10px;
-      display: inline-block;
-      box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    @media (max-width: 480px) {
+        header h1 {
+    font-size: 20px;
     }
-  </style>
+    }
+
+    .category {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    .category:hover {
+      background-color: #e0f7fa;
+      color: #00796b;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #444;
+      padding: 20px;
+      margin-top: auto;
+      background-color: #fff;
+      width: 100%;
+      box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://i.ibb.co.com/hx2yBRb5/6114123539608093476-121.jpg" alt="Logo" class="logo" />
-    <h1>Halaman Sedang Dalam Pembuatan</h1>
-    <p>Mohon tunggu, admin membuat halaman ini.</p>
-
-    <div class="clock-box" id="clock">00:00:00</div>
-  </div>
-
-  <script>
-    function updateClock() {
-      const now = new Date();
-      const utc = now.getTime() + now.getTimezoneOffset() * 60000;
-      const indonesiaTime = new Date(utc + (3600000 * 7)); // GMT+7
-
-      const hours = indonesiaTime.getHours().toString().padStart(2, '0');
-      const minutes = indonesiaTime.getMinutes().toString().padStart(2, '0');
-      const seconds = indonesiaTime.getSeconds().toString().padStart(2, '0');
-
-      document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-    }
-
-    setInterval(updateClock, 1000);
-    updateClock();
-  </script>
+    <header>
+        <img src="https://i.ibb.co.com/hx2yBRb5/6114123539608093476-121.jpg" alt="Foto Profil" />
+        <h1>sscfticgalcalc2</h1>
+    </header>
+    <main>
+        <div class="category">
+            <div>
+                <h5 id="jbl">JBL Phantom Earbuds Bluetooth H33 WaterProof</h5>
+            </div>
+        </div>
+    </main>
 </body>
+<script>
+    document.getElementById("jbl").onclick = function() {
+        window.location.href = "https://vt.tokopedia.com/t/ZShDethX9"
+    }
+</script>
+<footer>
+    <p>Dipersembahkan oleh sscfticgalcalc2</p>
+    <p>Didukung oleh TikTok, TikTok Shop, TikTok Affiliate, TikTok Shop x Tokopedia, Tokopedia</p>
+  </footer>
 </html>
